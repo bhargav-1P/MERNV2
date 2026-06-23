@@ -1,0 +1,83 @@
+/* Apply border-box globally so padding and border are included in width/height */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* Center the card on the page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* full viewport height */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* ===== THE CARD ===== */
+.card {
+    /* Content width will be 300px max, padding and border inside */
+    max-width: 300px;
+    width: 90%; /* responsive on small screens */
+    
+    /* BOX MODEL PROPERTIES */
+    margin: 20px;           /* space outside the card */
+    border: 1px solid #ddd; /* visible boundary */
+    border-radius: 10px;    /* rounded corners */
+    padding: 20px;          /* space inside the card, between border and content */
+    
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* subtle shadow */
+}
+
+/* ===== CARD IMAGE ===== */
+.card-image {
+    background-color: #e0e0e0;
+    height: 180px;
+    /* Center the placeholder text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    font-weight: bold;
+    
+    /* BOX MODEL: margin below the image */
+    margin-bottom: 15px; /* pushes the title away */
+    border-radius: 5px;
+}
+
+/* ===== CARD TITLE ===== */
+.card-title {
+    margin: 0 0 10px 0; /* top right bottom left */
+    font-size: 1.2rem;
+}
+
+/* ===== DESCRIPTION ===== */
+.card-description {
+    margin: 0 0 15px 0;
+    color: #555;
+    line-height: 1.4;
+}
+
+/* ===== PRICE ===== */
+.card-price {
+    display: block; /* so it stacks on its own line */
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e63946;
+    margin-bottom: 15px;
+}
+
+/* ===== BUTTON ===== */
+.card-button {
+    width: 100%;
+    padding: 12px;          /* space inside button (top/bottom and left/right) */
+    background-color: #2a9d8f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    
+    /* BOX MODEL: no margin (touches card edge minus padding) */
+}
